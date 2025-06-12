@@ -1,0 +1,60 @@
+.top-banner {
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #f1f1f1;
+  gap: 1em;
+  flex-wrap: nowrap; /* prevent wrapping */
+}
+
+.banner-title {
+  font-size: 24px;
+  color:  #0968ee;
+  margin: 0;
+  flex-shrink: 0; /* don't shrink */
+}
+
+.search-container {
+  flex-grow: 1;       /* fill available space */
+  min-width: 0;       /* allow shrinking inside flex */
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.5em 2.5em 0.5em 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* include padding and border in width */
+}
+
+.search-button {
+  position: absolute;
+  right: 0.25em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #0074cc;
+  padding: 0 0.5em;
+  flex-shrink: 0;
+}
+
+.financing-box {
+  background-color: red;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0; /* prevent shrinking */
+  transition: background-color 0.3s;
+}
+
+.financing-box:hover {
+  background-color: darkred;
+}
