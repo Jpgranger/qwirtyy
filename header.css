@@ -17,8 +17,6 @@ header {
   font-size: 14px;
   padding: 0 10px;
 }
-
-/* Add a vertical separator line */
 .left-nav a:not(:last-child)::after,
 .right-nav a:not(:last-child)::after {
   content: "|";

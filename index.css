@@ -4,19 +4,19 @@
   padding: 1em 2em;
   background-color: #f1f1f1;
   gap: 1em;
-  flex-wrap: nowrap; /* prevent wrapping */
+  flex-wrap: nowrap;
 }
 
 .banner-title {
   font-size: 24px;
   color:  #0968ee;
   margin: 0;
-  flex-shrink: 0; /* don't shrink */
+  flex-shrink: 0;
 }
 
 .search-container {
-  flex-grow: 1;       /* fill available space */
-  min-width: 0;       /* allow shrinking inside flex */
+  flex-grow: 1; 
+  min-width: 0; 
   position: relative;
 }
 
@@ -26,7 +26,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  box-sizing: border-box; /* include padding and border in width */
+  box-sizing: border-box;
 }
 
 .search-button {
@@ -51,7 +51,7 @@
   text-decoration: none;
   font-weight: bold;
   white-space: nowrap;
-  flex-shrink: 0; /* prevent shrinking */
+  flex-shrink: 0; 
   transition: background-color 0.3s;
 }
 
@@ -61,16 +61,12 @@
 .main-content {
   display: flex;
   padding: 1em 2em;
-  gap: 2em; /* spacing between sidebar and grid */
+  gap: 2em;
 }
-
-/* Sidebar stays fixed width */
 .sidebar {
   width: 200px;
   flex-shrink: 0;
 }
-
-/* Grid fills remaining space */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -90,4 +86,13 @@
   .product-card h3 {
     font-size: 16px;
   }
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: calc(100vh - 200px);
 }
