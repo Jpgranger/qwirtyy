@@ -58,3 +58,36 @@
 .financing-box:hover {
   background-color: darkred;
 }
+.main-content {
+  display: flex;
+  padding: 1em 2em;
+  gap: 2em; /* spacing between sidebar and grid */
+}
+
+/* Sidebar stays fixed width */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+/* Grid fills remaining space */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1em;
+  flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .product-card h3 {
+    font-size: 16px;
+  }
+}
